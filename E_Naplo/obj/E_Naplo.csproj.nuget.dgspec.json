@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gomcs\\Documents\\1\\Digimonos sulimon\\Programozás\\2021-2022\\E_Naplo\\E_Naplo\\E_Naplo.csproj": {}
+    "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gomcs\\Documents\\1\\Digimonos sulimon\\Programozás\\2021-2022\\E_Naplo\\E_Naplo\\E_Naplo.csproj": {
+    "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gomcs\\Documents\\1\\Digimonos sulimon\\Programozás\\2021-2022\\E_Naplo\\E_Naplo\\E_Naplo.csproj",
+        "projectUniqueName": "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj",
         "projectName": "E_Naplo",
-        "projectPath": "C:\\Users\\gomcs\\Documents\\1\\Digimonos sulimon\\Programozás\\2021-2022\\E_Naplo\\E_Naplo\\E_Naplo.csproj",
+        "projectPath": "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj",
         "packagesPath": "C:\\Users\\gomcs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gomcs\\Documents\\1\\Digimonos sulimon\\Programozás\\2021-2022\\E_Naplo\\E_Naplo\\obj\\",
+        "outputPath": "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gomcs\\AppData\\Roaming\\NuGet\\NuGet.Config",

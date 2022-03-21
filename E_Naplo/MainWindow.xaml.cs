@@ -21,7 +21,7 @@ namespace E_Naplo
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<ReadIn> enaplo=new List<ReadIn>();
+        List<ReadIn> enaplo = new List<ReadIn>();
 
         public MainWindow()
         {
@@ -35,11 +35,43 @@ namespace E_Naplo
                 enaplo.Add(new ReadIn(item));
             }
             datas.ItemsSource = enaplo;
-            selectsearch.Items.Add("Sorszám");
             selectsearch.Items.Add("Név");
             selectsearch.Items.Add("Évfolyam");
             selectsearch.Items.Add("Osztály");
+            Create();
         }
+
+        private void Create()
+        {
+            string fileName = @"C:\Temp\CSharpAuthors.txt";
+            FileStream stream = null;
+            try
+            {
+                // Create a FileStream with mode CreateNew  
+                stream = new FileStream(fileName, FileMode.OpenOrCreate);
+                // Create a StreamWriter from FileStream  
+                using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+                {
+                    writer.WriteLine("C# Corner Authors");
+                    writer.WriteLine("==================");
+                    writer.WriteLine("Monica Rathbun");
+                    writer.WriteLine("Vidya Agarwal");
+                    writer.WriteLine("Mahesh Chand");
+                    writer.WriteLine("Vijay Anand");
+                    writer.WriteLine("Jignesh Trivedi");
+                }
+            }
+            finally
+            {
+                if (stream != null)
+                    stream.Dispose();
+            }
+            // Read a file  
+            string readText = File.ReadAllText(fileName);
+            Console.WriteLine(readText);
+            Console.ReadKey();
+        }
+    
 
         private void searchbutton_Click(object sender, RoutedEventArgs e)
         {
