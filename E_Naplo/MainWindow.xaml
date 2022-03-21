@@ -1,0 +1,16 @@
+﻿<Window x:Class="E_Naplo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:E_Naplo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="datas" HorizontalAlignment="Left" Height="400" Margin="10,24,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Width="600" MinColumnWidth="100"/>
+        <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="615,126,0,0" VerticalAlignment="Top" Width="150" FontSize="17" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="searchtext" HorizontalAlignment="Left" Height="25" Margin="615,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="610,41,0,0" VerticalAlignment="Top" Width="150"/>
+
+    </Grid>
+</Window>
