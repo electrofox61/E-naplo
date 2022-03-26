@@ -21,7 +21,7 @@ namespace E_Naplo
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<ReadIn> enaplo = new List<ReadIn>();
+         List<ReadIn> enaplo = new List<ReadIn>();
 
         public MainWindow()
         {
@@ -38,38 +38,42 @@ namespace E_Naplo
             selectsearch.Items.Add("Név");
             selectsearch.Items.Add("Évfolyam");
             selectsearch.Items.Add("Osztály");
-            Create();
+            CreateButton.Visibility=Visibility.Collapsed; 
         }
 
         private void Create()
         {
-            string fileName = @"C:\Temp\CSharpAuthors.txt";
-            FileStream stream = null;
-            try
+            
+            for (int i = 0; i < enaplo.Count; i++)
             {
-                // Create a FileStream with mode CreateNew  
-                stream = new FileStream(fileName, FileMode.OpenOrCreate);
-                // Create a StreamWriter from FileStream  
-                using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+                string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\" + enaplo[i].Név + ".txt";
+
+                FileStream stream = null;
+                try
                 {
-                    writer.WriteLine("C# Corner Authors");
-                    writer.WriteLine("==================");
-                    writer.WriteLine("Monica Rathbun");
-                    writer.WriteLine("Vidya Agarwal");
-                    writer.WriteLine("Mahesh Chand");
-                    writer.WriteLine("Vijay Anand");
-                    writer.WriteLine("Jignesh Trivedi");
+                    // Create a FileStream with mode CreateNew  
+                    stream = new FileStream(fileName, FileMode.OpenOrCreate);
+                    // Create a StreamWriter from FileStream  
+                    using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+                    {
+                        Random r = new Random();
+                        for (int b = 0; b < 10; b++)
+                        {
+                            int vrg = r.Next(1, 6);
+                            writer.WriteLine(vrg);
+                        }
+                    }
                 }
+                finally
+                {
+                    if (stream != null)
+                        stream.Dispose();
+                }
+                // Read a file  
+                string readText = File.ReadAllText(fileName);
+                Console.WriteLine(readText);
             }
-            finally
-            {
-                if (stream != null)
-                    stream.Dispose();
-            }
-            // Read a file  
-            string readText = File.ReadAllText(fileName);
-            Console.WriteLine(readText);
-            Console.ReadKey();
+            
         }
     
 
@@ -104,6 +108,45 @@ namespace E_Naplo
             }
         }
 
-        
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Create();
+        }
+
+        private void averagebutton_Click(object sender, RoutedEventArgs e)
+        {
+            /*if (selectsearch.Text == "Név")
+            {
+                datas.Items.Refresh();
+                var averagevar = jegyek
+                    .Where(x => x.Név == selectsearch.Text)
+                    .Average(x => x.Osztályzat)
+                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
+                    .ToList();
+                datas.ItemsSource = averagevar;
+
+            }
+            else if (selectsearch.Text == "Évfolyam")
+            {
+                datas.Items.Refresh();
+                var averagevar = jegyek
+                    .Where(x => x.Évfolyam == selectsearch.Text)
+                    .Average(x => x.Osztályzat)
+                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
+                    .ToList();
+                datas.ItemsSource = averagevar;
+            }
+            else if (selectsearch.Text == "Osztály")
+            {
+                datas.Items.Refresh();
+                var averagevar = jegyek
+                    .Where(x => x.Osztály == selectsearch.Text)
+                    .Average(x => x.Osztályzat)
+                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
+                    .ToList();
+                datas.ItemsSource = averagevar;
+            }*/
+            
+        }
     }
 }

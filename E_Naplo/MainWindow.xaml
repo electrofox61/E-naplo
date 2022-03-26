@@ -11,6 +11,8 @@
         <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="615,126,0,0" VerticalAlignment="Top" Width="150" FontSize="17" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <TextBox x:Name="searchtext" HorizontalAlignment="Left" Height="25" Margin="615,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="610,41,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="CreateButton" Content="Button" HorizontalAlignment="Left" Height="90" Margin="650,224,0,0" VerticalAlignment="Top" Width="40" Click="CreateButton_Click"/>
+        <Button x:Name="averagebutton" Content="Button" HorizontalAlignment="Left" Height="45" Margin="650,379,0,0" VerticalAlignment="Top" Width="110" Click="averagebutton_Click"/>
 
     </Grid>
 </Window>
