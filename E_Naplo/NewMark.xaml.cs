@@ -182,5 +182,6 @@ namespace E_Naplo
 
             */
         }
+        //Holnapi Csengének: be akarod állítani hogy az osztályoknak legyen külön átlaga és/vagy egy-egy embernek
     }
 }

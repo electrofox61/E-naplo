@@ -8,7 +8,7 @@
         Title="NewMark" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <DataGrid x:Name="grades" HorizontalAlignment="Left" Height="259" Margin="0,165,0,0" VerticalAlignment="Top" Width="790" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Button x:Name="averagebutton" Content="Button" HorizontalAlignment="Left" Height="90" Margin="601,70,0,0" VerticalAlignment="Top" Width="49" Click="averagebutton_Click"/>
+        <Button x:Name="averagebutton" Content="Button" HorizontalAlignment="Left" Height="90" Margin="619,31,0,0" VerticalAlignment="Top" Width="49" Click="averagebutton_Click"/>
         <ComboBox x:Name="selectclass" HorizontalAlignment="Left" Height="100" Margin="464,21,0,0" VerticalAlignment="Top" Width="49"/>
 
     </Grid>
