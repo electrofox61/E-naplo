@@ -21,4 +21,6 @@ namespace E_Naplo
             Osztály = part[3];
         }
     }
+
+
 }

@@ -39,15 +39,9 @@ namespace E_Naplo
             selectsearch.Items.Add("Név");
             selectsearch.Items.Add("Évfolyam");
             selectsearch.Items.Add("Osztály");
-            CreateButton.Visibility=Visibility.Collapsed;
+            //CreateButton.Visibility=Visibility.Collapsed;
 
-            for (int i = 0; i < 427; i++)
-            {
-                foreach (var item in File.ReadAllLines(enaplo[i].Név + ".txt"))
-                {
-                    jegyek.Add(new Jegyek(item));
-                }
-            }
+            
             
         }
 
@@ -56,21 +50,20 @@ namespace E_Naplo
             
             for (int i = 0; i < enaplo.Count; i++)
             {
-                string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\" + enaplo[i].Név + ".txt";
+                string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\" + enaplo[i].Név + ".txt";
 
                 FileStream stream = null;
                 try
                 {
-                    // Create a FileStream with mode CreateNew  
                     stream = new FileStream(fileName, FileMode.OpenOrCreate);
-                    // Create a StreamWriter from FileStream  
                     using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
                     {
                         Random r = new Random();
+                        writer.Write(enaplo[i].Név);
                         for (int b = 0; b < 10; b++)
                         {
                             int vrg = r.Next(1, 6);
-                            writer.WriteLine(vrg);
+                            writer.Write(";" + vrg );
                         }
                     }
                 }
@@ -79,7 +72,6 @@ namespace E_Naplo
                     if (stream != null)
                         stream.Dispose();
                 }
-                // Read a file  
                 string readText = File.ReadAllText(fileName);
                 Console.WriteLine(readText);
 
@@ -125,10 +117,9 @@ namespace E_Naplo
         }
 
         private void averagebutton_Click(object sender, RoutedEventArgs e)
-        {/*
-            datas.ItemsSource = jegyek;
+        {
 
-            if (selectsearch.Text == "Név")
+            /*if (selectsearch.Text == "Név")
             {
                 datas.Items.Refresh();
                 var averagevar = enaplo
@@ -152,18 +143,26 @@ namespace E_Naplo
             else if (selectsearch.Text == "Osztály")
             {
                 datas.Items.Refresh();
-                var averagevar = enaplo
+                var averagevar = jegyek
                     .Where(x => x.Osztály == selectsearch.Text)
                     .Average(x => x.Osztályzat)
                     .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
                     .ToList();
                 datas.ItemsSource = averagevar;
-            }
-         */
+            }*/
+         
             
             datas.ItemsSource = jegyek;
-
             
+
+
+        }
+
+        private void newmark_Click(object sender, RoutedEventArgs e)
+        {
+            NewMark sw = new NewMark();
+            sw.Show();
+            Close();
         }
     }
 }

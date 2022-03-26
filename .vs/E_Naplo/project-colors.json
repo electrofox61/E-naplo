@@ -5,6 +5,11 @@
       "ProjectGuid": "fe5d292d-1214-4c18-9913-2c7087bb0489",
       "DisplayName": "E_Naplo",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

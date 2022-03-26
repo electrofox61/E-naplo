@@ -13,6 +13,7 @@
         <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="610,41,0,0" VerticalAlignment="Top" Width="150"/>
         <Button x:Name="CreateButton" Content="Button" HorizontalAlignment="Left" Height="90" Margin="650,224,0,0" VerticalAlignment="Top" Width="40" Click="CreateButton_Click"/>
         <Button x:Name="averagebutton" Content="Button" HorizontalAlignment="Left" Height="45" Margin="650,379,0,0" VerticalAlignment="Top" Width="110" Click="averagebutton_Click"/>
+        <Button x:Name="newmark" Content="Button" HorizontalAlignment="Left" Height="121" Margin="713,231,0,0" VerticalAlignment="Top" Width="52" Click="newmark_Click"/>
 
     </Grid>
 </Window>

@@ -21,7 +21,6 @@ C:\Users\gomcs\Documents\1\Digimonos sulimon\Programozás\2021-2022\E_Naplo\E_Na
 C:\Users\gomcs\Documents\1\Digimonos sulimon\Programozás\2021-2022\E_Naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo.pdb
 C:\Users\gomcs\Documents\1\Digimonos sulimon\Programozás\2021-2022\E_Naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo.genruntimeconfig.cache
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\E_Naplo.exe
-C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\Tanulók.txt
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\E_Naplo.deps.json
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\E_Naplo.runtimeconfig.json
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\E_Naplo.dll
@@ -42,6 +41,9 @@ C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\ref\E_Naplo.dll
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo.pdb
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo.genruntimeconfig.cache
+C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\NewMark.g.cs
+C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\NewMark.baml
+C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\Tanulók.txt
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\Ajtósi Patrik.txt
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\Alföldi Annamária.txt
 C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\bin\Debug\net6.0-windows\Almási Rebeka.txt
