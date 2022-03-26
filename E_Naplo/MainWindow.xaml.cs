@@ -21,7 +21,8 @@ namespace E_Naplo
     /// </summary>
     public partial class MainWindow : Window
     {
-         List<ReadIn> enaplo = new List<ReadIn>();
+        List<ReadIn> enaplo = new List<ReadIn>();
+        List<Jegyek> jegyek = new List<Jegyek>();
 
         public MainWindow()
         {
@@ -38,7 +39,16 @@ namespace E_Naplo
             selectsearch.Items.Add("Név");
             selectsearch.Items.Add("Évfolyam");
             selectsearch.Items.Add("Osztály");
-            CreateButton.Visibility=Visibility.Collapsed; 
+            CreateButton.Visibility=Visibility.Collapsed;
+
+            for (int i = 0; i < 427; i++)
+            {
+                foreach (var item in File.ReadAllLines(enaplo[i].Név + ".txt"))
+                {
+                    jegyek.Add(new Jegyek(item));
+                }
+            }
+            
         }
 
         private void Create()
@@ -72,6 +82,7 @@ namespace E_Naplo
                 // Read a file  
                 string readText = File.ReadAllText(fileName);
                 Console.WriteLine(readText);
+
             }
             
         }
@@ -114,11 +125,13 @@ namespace E_Naplo
         }
 
         private void averagebutton_Click(object sender, RoutedEventArgs e)
-        {
-            /*if (selectsearch.Text == "Név")
+        {/*
+            datas.ItemsSource = jegyek;
+
+            if (selectsearch.Text == "Név")
             {
                 datas.Items.Refresh();
-                var averagevar = jegyek
+                var averagevar = enaplo
                     .Where(x => x.Név == selectsearch.Text)
                     .Average(x => x.Osztályzat)
                     .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
@@ -129,7 +142,7 @@ namespace E_Naplo
             else if (selectsearch.Text == "Évfolyam")
             {
                 datas.Items.Refresh();
-                var averagevar = jegyek
+                var averagevar = enaplo
                     .Where(x => x.Évfolyam == selectsearch.Text)
                     .Average(x => x.Osztályzat)
                     .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
@@ -139,13 +152,17 @@ namespace E_Naplo
             else if (selectsearch.Text == "Osztály")
             {
                 datas.Items.Refresh();
-                var averagevar = jegyek
+                var averagevar = enaplo
                     .Where(x => x.Osztály == selectsearch.Text)
                     .Average(x => x.Osztályzat)
                     .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
                     .ToList();
                 datas.ItemsSource = averagevar;
-            }*/
+            }
+         */
+            
+            datas.ItemsSource = jegyek;
+
             
         }
     }
