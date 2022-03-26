@@ -479,6 +479,9 @@
     <None Update="Janka Csanád.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="jegyek.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Jenei Dániel.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

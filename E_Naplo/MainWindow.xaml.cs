@@ -39,7 +39,7 @@ namespace E_Naplo
             selectsearch.Items.Add("Név");
             selectsearch.Items.Add("Évfolyam");
             selectsearch.Items.Add("Osztály");
-            //CreateButton.Visibility=Visibility.Collapsed;
+            CreateButton.Visibility=Visibility.Collapsed;
 
             
             
@@ -50,7 +50,46 @@ namespace E_Naplo
             
             for (int i = 0; i < enaplo.Count; i++)
             {
-                string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\" + enaplo[i].Név + ".txt";
+                string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\jegyek.txt";
+
+                FileStream stream = null;
+                try
+                {
+                    stream = new FileStream(fileName, FileMode.OpenOrCreate);
+                    using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+                    {
+
+                        for (int j = 0; j < enaplo.Count; j++)
+                        {
+                            string classyear = enaplo[j].Évfolyam + enaplo[j].Osztály;
+
+                            Random r = new Random();
+                            for (int b = 0; b < 10; b++)
+                            {
+                                int vrg = r.Next(1, 6);
+                                writer.Write( vrg + ";" );
+                            }
+                            writer.Write(enaplo[j].Név + ";");
+                            writer.WriteLine(classyear + ";");
+                            
+
+                        }
+
+
+                    }
+                }
+                finally
+                {
+                    if (stream != null)
+                        stream.Dispose();
+                }
+                string readText = File.ReadAllText(fileName);
+                Console.WriteLine(readText);
+                
+
+                //Ez az eredeti profram, amiben létrejött minden diákhoz egy fájl, de ez sokkal energiaigényesebb volt, mint egy hosszú fájlt létrehozni.
+
+                /*string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\" + enaplo[i].Név + ".txt";
 
                 FileStream stream = null;
                 try
@@ -74,9 +113,9 @@ namespace E_Naplo
                 }
                 string readText = File.ReadAllText(fileName);
                 Console.WriteLine(readText);
-
+                */
             }
-            
+
         }
     
 
@@ -116,47 +155,6 @@ namespace E_Naplo
             Create();
         }
 
-        private void averagebutton_Click(object sender, RoutedEventArgs e)
-        {
-
-            /*if (selectsearch.Text == "Név")
-            {
-                datas.Items.Refresh();
-                var averagevar = enaplo
-                    .Where(x => x.Név == selectsearch.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                datas.ItemsSource = averagevar;
-
-            }
-            else if (selectsearch.Text == "Évfolyam")
-            {
-                datas.Items.Refresh();
-                var averagevar = enaplo
-                    .Where(x => x.Évfolyam == selectsearch.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                datas.ItemsSource = averagevar;
-            }
-            else if (selectsearch.Text == "Osztály")
-            {
-                datas.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectsearch.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                datas.ItemsSource = averagevar;
-            }*/
-         
-            
-            datas.ItemsSource = jegyek;
-            
-
-
-        }
 
         private void newmark_Click(object sender, RoutedEventArgs e)
         {

@@ -8,12 +8,11 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <DataGrid x:Name="datas" HorizontalAlignment="Left" Height="400" Margin="10,24,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Width="600" MinColumnWidth="100"/>
-        <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="615,126,0,0" VerticalAlignment="Top" Width="150" FontSize="17" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="615,126,0,0" VerticalAlignment="Top" Width="150" FontSize="15" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <TextBox x:Name="searchtext" HorizontalAlignment="Left" Height="25" Margin="615,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="610,41,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="CreateButton" Content="Button" HorizontalAlignment="Left" Height="90" Margin="650,224,0,0" VerticalAlignment="Top" Width="40" Click="CreateButton_Click"/>
-        <Button x:Name="averagebutton" Content="Button" HorizontalAlignment="Left" Height="45" Margin="650,379,0,0" VerticalAlignment="Top" Width="110" Click="averagebutton_Click"/>
-        <Button x:Name="newmark" Content="Button" HorizontalAlignment="Left" Height="121" Margin="713,231,0,0" VerticalAlignment="Top" Width="52" Click="newmark_Click"/>
+        <Button x:Name="CreateButton" Content="Létrehozás" HorizontalAlignment="Left" Height="35" Margin="650,389,0,0" VerticalAlignment="Top" Width="115" Click="CreateButton_Click"/>
+        <Button x:Name="newmark" Content="Jegyek megtekintése" HorizontalAlignment="Left" Height="25" Margin="615,217,0,0" VerticalAlignment="Top" Width="150" Click="newmark_Click" FontSize="15"/>
 
     </Grid>
 </Window>
