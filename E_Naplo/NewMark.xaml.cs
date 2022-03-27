@@ -40,7 +40,8 @@ namespace E_Naplo
             selectclass.Items.Add("12A");
             selectclass.Items.Add("12B");
             selectclass.Items.Add("12C");
-
+            
+            
         }
 
 
@@ -57,130 +58,20 @@ namespace E_Naplo
         }
 
         private void averagebutton_Click(object sender, RoutedEventArgs e)
-        {/*
-            if (selectclass.Text == "9A")
+        {
+            if (selectclass.Text != "")
             {
-                grades.Items.Refresh();
+                 grades.Items.Refresh();
                 var averagevar = jegyek
-                    .Where(x => x.Név == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
+                    .Where(x => x.PontosOsztály == selectclass.Text)
+                    //Averegae(x => x.ValamilyenTantárgy)
+                    .Select(x => new { PontosOsztáy=x.PontosOsztály, Név=x.Név, Matematika = x.Matematika, Szorgalom = x.Szorgalom, Nyelvtan = x.Nyelvtan, Irodalom = x.Irodalom, Földrajz =x.Földrajz , Biológia =x.Biológia, Kémia=x.Kémia, Informatika=x.Informatika , Történelem=x.Történelem, Magatartás =x.Magatartás })
                     .ToList();
                 grades.ItemsSource = averagevar;
 
             }
-            else if (selectclass.Text == "9B")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Évfolyam == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "9C")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "10A")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "10B")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "10C")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "11A")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "11B")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "11C")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "12A")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "12B")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-            else if (selectclass.Text == "12C")
-            {
-                grades.Items.Refresh();
-                var averagevar = jegyek
-                    .Where(x => x.Osztály == selectclass.Text)
-                    .Average(x => x.Osztályzat)
-                    .Select(x => new { Név = x.Név, Osztály = x.Osztály, Évfolyam = x.Évfolyam, Osztályzat = x.Osztályzat })
-                    .ToList();
-                grades.ItemsSource = averagevar;
-            }
-
-            */
+            //Ez lenne a működőképes, ha a double-lel nem lenne gondja
+            
         }
         //Holnapi Csengének: be akarod állítani hogy az osztályoknak legyen külön átlaga és/vagy egy-egy embernek
     }
