@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:E_Naplo"
         mc:Ignorable="d"
-        Title="NewMark" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Félévi Jegyek" Height="460" Loaded="Window_Loaded" Background="#FFFF7F35" Width="850" ResizeMode="CanMinimize" Cursor="Pen" Icon="/bronz.jpg">
     <Grid>
-        <DataGrid x:Name="grades" HorizontalAlignment="Left" Height="348" Margin="0,76,0,0" VerticalAlignment="Top" Width="790" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Button x:Name="averagebutton" Content="Osztály kiválasztása" HorizontalAlignment="Left" Height="50" Margin="250,21,0,0" VerticalAlignment="Top" Width="150" Click="averagebutton_Click"/>
-        <ComboBox x:Name="selectclass" HorizontalAlignment="Left" Height="50" Margin="444,21,0,0" VerticalAlignment="Top" Width="50"/>
+        <DataGrid x:Name="grades" HorizontalAlignment="Center" Height="348" Margin="0,76,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFFFA36E" BorderBrush="Black" Width="800"/>
+        <Button x:Name="averagebutton" Content="Osztály kiválasztása" HorizontalAlignment="Left" Height="50" Margin="675,15,0,0" VerticalAlignment="Top" Width="150" Click="averagebutton_Click" FontSize="15" Background="White" BorderBrush="#FFFF9254"/>
+        <ComboBox x:Name="selectclass" HorizontalAlignment="Left" Height="50" Margin="586,15,0,0" VerticalAlignment="Top" Width="61" FontSize="15" BorderBrush="#FFFF9254">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button x:Name="backbutton" Content="Vissza" HorizontalAlignment="Left" Height="50" Margin="25,15,0,0" VerticalAlignment="Top" Width="150" FontSize="15" Click="backbutton_Click" BorderBrush="#FFFF9254" Background="White"/>
 
     </Grid>
 </Window>

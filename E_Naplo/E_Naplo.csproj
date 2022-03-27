@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="bronz.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bronz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Ajtósi Patrik.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

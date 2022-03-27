@@ -59,7 +59,7 @@ namespace E_Naplo
 
         private void averagebutton_Click(object sender, RoutedEventArgs e)
         {
-            if (selectclass.Text != "")
+           if (selectclass.Text != "")
             {
                  grades.Items.Refresh();
                 var averagevar = jegyek
@@ -72,6 +72,13 @@ namespace E_Naplo
             }
             //Ez lenne a működőképes, ha a double-lel nem lenne gondja
             
+        }
+
+        private void backbutton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow sw2 = new MainWindow();
+            sw2.Show();
+            Close();
         }
         //Holnapi Csengének: be akarod állítani hogy az osztályoknak legyen külön átlaga és/vagy egy-egy embernek
     }

@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:E_Naplo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="E-Napló" Height="460" Width="850" Loaded="Window_Loaded" Background="#FFFFA464" ResizeMode="CanMinimize" Cursor="Pen" Icon="/bronz.jpg">
     <Grid>
-        <DataGrid x:Name="datas" HorizontalAlignment="Left" Height="400" Margin="10,24,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Width="600" MinColumnWidth="100"/>
-        <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="615,126,0,0" VerticalAlignment="Top" Width="150" FontSize="15" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="searchtext" HorizontalAlignment="Left" Height="25" Margin="615,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="610,41,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="CreateButton" Content="Létrehozás" HorizontalAlignment="Left" Height="35" Margin="650,389,0,0" VerticalAlignment="Top" Width="115" Click="CreateButton_Click"/>
-        <Button x:Name="newmark" Content="Jegyek megtekintése" HorizontalAlignment="Left" Height="25" Margin="615,217,0,0" VerticalAlignment="Top" Width="150" Click="newmark_Click" FontSize="15"/>
+        <DataGrid x:Name="datas" HorizontalAlignment="Left" Height="400" Margin="10,24,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" MinColumnWidth="100" Background="#FFFF7F35" Width="600" BorderBrush="#FFFF7F35"/>
+        <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="671,126,0,0" VerticalAlignment="Top" Width="150" FontSize="15" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="White" BorderBrush="#FFFFA464"/>
+        <TextBox x:Name="searchtext" HorizontalAlignment="Left" Height="25" Margin="671,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" BorderBrush="#FFFF7F35"/>
+        <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="671,66,0,0" VerticalAlignment="Top" Width="150" BorderBrush="#FFFF7F35">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button x:Name="CreateButton" Content="Létrehozás" HorizontalAlignment="Left" Height="35" Margin="688,389,0,0" VerticalAlignment="Top" Width="116" Click="CreateButton_Click" Background="White" BorderBrush="#FFFF7F35"/>
+        <Button x:Name="newmark" Content="Jegyek megtekintése" HorizontalAlignment="Left" Height="24" Margin="671,212,0,0" VerticalAlignment="Top" Width="150" Click="newmark_Click" FontSize="15" Background="White" BorderBrush="#FFFF7F35"/>
 
     </Grid>
 </Window>
