@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj": {}
+    "C:\\Users\\zsold\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj": {
+    "C:\\Users\\zsold\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj",
+        "projectUniqueName": "C:\\Users\\zsold\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj",
         "projectName": "E_Naplo",
-        "projectPath": "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj",
-        "packagesPath": "C:\\Users\\gomcs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gomcs\\Documents\\GitHub\\E-naplo\\E_Naplo\\obj\\",
+        "projectPath": "C:\\Users\\zsold\\Documents\\GitHub\\E-naplo\\E_Naplo\\E_Naplo.csproj",
+        "packagesPath": "C:\\Users\\zsold\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zsold\\Documents\\GitHub\\E-naplo\\E_Naplo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gomcs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zsold\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -57,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
