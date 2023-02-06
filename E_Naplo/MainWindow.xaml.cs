@@ -145,7 +145,7 @@ namespace E_Naplo
                 var srchclass = enaplo
                   .Where(x => x.Osztály == searchtext.Text)
                   .Select(x => new { Sorszám = x.Sorszám, Név = x.Név, Évfolyam = x.Évfolyam, Osztály = x.Osztály })
-                   .ToList();
+                  .ToList();
                 datas.ItemsSource = srchclass;
             }
         }

@@ -70,7 +70,7 @@ namespace E_Naplo
                 grades.ItemsSource = averagevar;
 
             }
-            //Ez lenne a működőképes, ha a double-lel nem lenne gondja
+            
             
         }
 
@@ -80,6 +80,6 @@ namespace E_Naplo
             sw2.Show();
             Close();
         }
-        //Holnapi Csengének: be akarod állítani hogy az osztályoknak legyen külön átlaga és/vagy egy-egy embernek
+        
     }
 }
