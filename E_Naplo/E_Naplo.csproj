@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="bronz.jpg" />
+    <None Remove="logo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="bronz.jpg">
+    <Resource Include="logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

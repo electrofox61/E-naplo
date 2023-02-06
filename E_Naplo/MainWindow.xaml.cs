@@ -71,11 +71,7 @@ namespace E_Naplo
                             }
                             writer.Write(enaplo[j].Név + ";");
                             writer.WriteLine(classyear + ";");
-                            
-
                         }
-
-
                     }
                 }
                 finally

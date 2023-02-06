@@ -1,0 +1,26 @@
+﻿<Window x:Class="E_Naplo.Kezdolap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:E_Naplo"
+        mc:Ignorable="d"
+        Title="Kezdolap" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="837*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="startsbutton" Content="Belépés" HorizontalAlignment="Center" Margin="0,258,0,0" VerticalAlignment="Top" Height="89" Width="332" FontSize="25" FontFamily="Yu Gothic UI" Click="startsbutton_Click" BorderBrush="{x:Null}">
+
+        </Button>
+        <Label x:Name="welcomelabel" Content="Jobb Kréta" HorizontalAlignment="Left" Height="71" VerticalAlignment="Center" Width="201" FontSize="40" FontFamily="Yu Gothic UI" Margin="300,0,0,0"/>
+       
+        <Image Height="100" Width="100" Margin="348,80,348,254">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/logo.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+
+    </Grid>
+</Window>
