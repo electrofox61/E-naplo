@@ -21,7 +21,7 @@ namespace E_Naplo
     /// </summary>
     public partial class NewMark : Window
     {
-        List<Jegyek> jegyek = new List<Jegyek>();
+       public  List<Jegyek> jegyek = new List<Jegyek>();
 
         public NewMark()
         {
@@ -54,7 +54,6 @@ namespace E_Naplo
                 jegyek.Add(new Jegyek(item));
             }
             grades.ItemsSource = jegyek;
-
         }
 
         private void averagebutton_Click(object sender, RoutedEventArgs e)
