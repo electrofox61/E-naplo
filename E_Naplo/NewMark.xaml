@@ -7,8 +7,40 @@
         mc:Ignorable="d"
         Title="Félévi Jegyek" Height="460" Loaded="Window_Loaded" Background="#FFFF7F35" Width="850" ResizeMode="CanMinimize" Cursor="Pen" WindowState="Maximized" WindowStyle="None" >
     <Grid>
-        <DataGrid x:Name="grades" AlternatingRowBackground="#FFFF7F35" AlternationCount="2" HorizontalAlignment="Center" Height="348" Margin="0,76,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFFFA36E" BorderBrush="Black" Width="800"/>
-
+        <DataGrid x:Name="grades" AlternationCount="6" HorizontalAlignment="Center" Height="348" Margin="0,76,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFFFA36E" BorderBrush="Black" Width="800">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="Blue"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Style.Triggers>
+                        <Trigger Property="DataGrid.AlternationIndex" Value="0">
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                        <Trigger Property="DataGrid.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="Orange"/>
+                            <Setter Property="Foreground" Value="#FF3C3C3C"/>
+                        </Trigger>
+                        <Trigger Property="DataGrid.AlternationIndex" Value="2">
+                            <Setter Property="Background" Value="Yellow"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                        <Trigger Property="DataGrid.AlternationIndex" Value="3">
+                            <Setter Property="Background" Value="DarkGreen"/>
+                            <Setter Property="Foreground" Value="#FF3C3C3C"/>
+                        </Trigger>
+                        <Trigger Property="DataGrid.AlternationIndex" Value="4">
+                            <Setter Property="Background" Value="Blue"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                        <Trigger Property="DataGrid.AlternationIndex" Value="5">
+                            <Setter Property="Background" Value="Purple"/>
+                            <Setter Property="Foreground" Value="#FF3C3C3C"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
         <Button x:Name="averagebutton" Content="Osztály kiválasztása" HorizontalAlignment="Left" Height="50" Margin="675,15,0,0" VerticalAlignment="Top" Width="150" Click="averagebutton_Click" FontSize="15" Background="White" BorderBrush="#FFFF9254"/>
         <ComboBox x:Name="selectclass" HorizontalAlignment="Left" Height="50" Margin="586,15,0,0" VerticalAlignment="Top" Width="61" FontSize="15" BorderBrush="#FFFF9254">
             <ComboBox.Background>
