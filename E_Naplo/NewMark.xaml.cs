@@ -27,7 +27,7 @@ namespace E_Naplo
         {
 
             InitializeComponent();
-            
+
             selectclass.Items.Add("9A");
             selectclass.Items.Add("9B");
             selectclass.Items.Add("9C");
@@ -40,15 +40,15 @@ namespace E_Naplo
             selectclass.Items.Add("12A");
             selectclass.Items.Add("12B");
             selectclass.Items.Add("12C");
-            
-            
+
+
         }
 
 
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
             foreach (var item in File.ReadAllLines("jegyek.txt"))
             {
                 jegyek.Add(new Jegyek(item));
@@ -59,19 +59,19 @@ namespace E_Naplo
 
         private void averagebutton_Click(object sender, RoutedEventArgs e)
         {
-           if (selectclass.Text != "")
+            if (selectclass.Text != "")
             {
-                 grades.Items.Refresh();
+                grades.Items.Refresh();
                 var averagevar = jegyek
                     .Where(x => x.PontosOsztály == selectclass.Text)
-                    //Averegae(x => x.ValamilyenTantárgy)
-                    .Select(x => new { PontosOsztáy=x.PontosOsztály, Név=x.Név, Matematika = x.Matematika, Szorgalom = x.Szorgalom, Nyelvtan = x.Nyelvtan, Irodalom = x.Irodalom, Földrajz =x.Földrajz , Biológia =x.Biológia, Kémia=x.Kémia, Informatika=x.Informatika , Történelem=x.Történelem, Magatartás =x.Magatartás })
+                    //Averege(x => x.ValamilyenTantárgy)
+                    .Select(x => new { PontosOsztáy = x.PontosOsztály, Név = x.Név, Matematika = x.Matematika, Szorgalom = x.Szorgalom, Nyelvtan = x.Nyelvtan, Irodalom = x.Irodalom, Földrajz = x.Földrajz, Biológia = x.Biológia, Kémia = x.Kémia, Informatika = x.Informatika, Történelem = x.Történelem, Magatartás = x.Magatartás })
                     .ToList();
                 grades.ItemsSource = averagevar;
 
             }
-            
-            
+
+
         }
 
         private void backbutton_Click(object sender, RoutedEventArgs e)
@@ -80,6 +80,15 @@ namespace E_Naplo
             sw2.Show();
             Close();
         }
-        
+
+        private void studentbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void kilepesgomb_Click(object sender, RoutedEventArgs e)
+        {
+            newmark.Close();
+        }
     }
 }

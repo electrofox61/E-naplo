@@ -39,15 +39,15 @@ namespace E_Naplo
             selectsearch.Items.Add("Név");
             selectsearch.Items.Add("Évfolyam");
             selectsearch.Items.Add("Osztály");
-            CreateButton.Visibility=Visibility.Collapsed;
+            CreateButton.Visibility = Visibility.Collapsed;
 
-            
-            
+
+
         }
 
         private void Create()
         {
-            
+
             for (int i = 0; i < enaplo.Count; i++)
             {
                 string fileName = @"C:\Users\gomcs\Documents\GitHub\E-naplo\E_Naplo\jegyek.txt";
@@ -67,7 +67,7 @@ namespace E_Naplo
                             for (int b = 0; b < 10; b++)
                             {
                                 int vrg = r.Next(1, 6);
-                                writer.Write( vrg + ";" );
+                                writer.Write(vrg + ";");
                             }
                             writer.Write(enaplo[j].Név + ";");
                             writer.WriteLine(classyear + ";");
@@ -81,7 +81,7 @@ namespace E_Naplo
                 }
                 string readText = File.ReadAllText(fileName);
                 Console.WriteLine(readText);
-                
+
 
                 //Ez az eredeti profram, amiben létrejött minden diákhoz egy fájl, de ez sokkal energiaigényesebb volt, mint egy hosszú fájlt létrehozni.
 
@@ -113,7 +113,7 @@ namespace E_Naplo
             }
 
         }
-    
+
 
         private void searchbutton_Click(object sender, RoutedEventArgs e)
         {
@@ -157,6 +157,11 @@ namespace E_Naplo
             NewMark sw = new NewMark();
             sw.Show();
             Close();
+        }
+
+        private void kilepesgomb_Click(object sender, RoutedEventArgs e)
+        {
+            foablak.Close();
         }
     }
 }

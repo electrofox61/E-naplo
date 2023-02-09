@@ -71,3 +71,4 @@ C:\Users\zsold\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo
 C:\Users\zsold\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\E_Naplo.genruntimeconfig.cache
 C:\Users\zsold\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\ref\E_Naplo.dll
 C:\Users\zsold\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\Kezdolap.g.cs
+C:\Users\zsold\Documents\GitHub\E-naplo\E_Naplo\obj\Debug\net6.0-windows\Kezdolap.baml

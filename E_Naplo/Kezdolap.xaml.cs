@@ -23,12 +23,32 @@ namespace E_Naplo
         {
             InitializeComponent();
         }
-
         private void startsbutton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow sw2 = new MainWindow();
             sw2.Show();
             Close();
+        }
+
+        private void felhasznalo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (felhasznalo.Text != "" && jelszo.Password != "")
+            {
+                startsbutton.IsEnabled = true;
+            }
+        }
+
+        private void jelszo_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (felhasznalo.Text != "" && jelszo.Password != "")
+            {
+                startsbutton.IsEnabled = true;
+            }
+        }
+
+        private void kilepesgomb_Click(object sender, RoutedEventArgs e)
+        {
+            kezdolap.Close();
         }
     }
 }

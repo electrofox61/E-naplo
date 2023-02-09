@@ -1,13 +1,14 @@
-﻿<Window x:Class="E_Naplo.NewMark"
+﻿<Window x:Name="newmark" x:Class="E_Naplo.NewMark"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:E_Naplo"
         mc:Ignorable="d"
-        Title="Félévi Jegyek" Height="460" Loaded="Window_Loaded" Background="#FFFF7F35" Width="850" ResizeMode="CanMinimize" Cursor="Pen" Icon="/bronz.jpg">
+        Title="Félévi Jegyek" Height="460" Loaded="Window_Loaded" Background="#FFFF7F35" Width="850" ResizeMode="CanMinimize" Cursor="Pen" WindowState="Maximized" WindowStyle="None" >
     <Grid>
-        <DataGrid x:Name="grades" HorizontalAlignment="Center" Height="348" Margin="0,76,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFFFA36E" BorderBrush="Black" Width="800"/>
+        <DataGrid x:Name="grades" AlternatingRowBackground="#FFFF7F35" AlternationCount="2" HorizontalAlignment="Center" Height="348" Margin="0,76,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFFFA36E" BorderBrush="Black" Width="800"/>
+
         <Button x:Name="averagebutton" Content="Osztály kiválasztása" HorizontalAlignment="Left" Height="50" Margin="675,15,0,0" VerticalAlignment="Top" Width="150" Click="averagebutton_Click" FontSize="15" Background="White" BorderBrush="#FFFF9254"/>
         <ComboBox x:Name="selectclass" HorizontalAlignment="Left" Height="50" Margin="586,15,0,0" VerticalAlignment="Top" Width="61" FontSize="15" BorderBrush="#FFFF9254">
             <ComboBox.Background>
@@ -18,6 +19,9 @@
             </ComboBox.Background>
         </ComboBox>
         <Button x:Name="backbutton" Content="Vissza" HorizontalAlignment="Left" Height="50" Margin="25,15,0,0" VerticalAlignment="Top" Width="150" FontSize="15" Click="backbutton_Click" BorderBrush="#FFFF9254" Background="White"/>
+        <Button x:Name="studentbutton" Content="Tanuló kiválasztása" HorizontalAlignment="Left" Height="50" Width="150" FontSize="15" BorderBrush="#FFFF9254" Background="White" Margin="211,15,0,0" VerticalAlignment="Top" Click="studentbutton_Click"/>
+        <ComboBox x:Name="kivalaszto" HorizontalAlignment="Left" Margin="385,18,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="kilepesgomb" Content="Kilépés" HorizontalAlignment="Right" Margin="0,0,45,45" VerticalAlignment="Bottom" Click="kilepesgomb_Click" Background="#FFED0F0F"/>
 
     </Grid>
 </Window>

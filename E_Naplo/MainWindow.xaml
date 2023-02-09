@@ -1,15 +1,25 @@
-﻿
-<Window x:Class="E_Naplo.MainWindow"
+﻿<Window x:Name="foablak" x:Class="E_Naplo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:E_Naplo"
         mc:Ignorable="d"
-        Title="E-Napló" Height="460" Width="850" Loaded="Window_Loaded" Background="#FFFFA464" ResizeMode="CanMinimize" Cursor="Pen" Icon="/bronz.jpg">
-        
+        Title="E-Napló" Height="460" Width="850" Loaded="Window_Loaded" Background="#FFFFA464" ResizeMode="CanMinimize" Cursor="Pen" WindowState="Maximized" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="DataGridRowHeaderStyle1" TargetType="{x:Type DataGridRowHeader}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridRowHeader}">
+                        <Grid/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <DataGrid x:Name="datas" HorizontalAlignment="Left" Height="400" Margin="10,24,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" MinColumnWidth="100" Background="#FFFF7F35" Width="600" BorderBrush="#FFFF7F35"/>
+        <DataGrid RowHeaderStyle="{DynamicResource DataGridRowHeaderStyle1}" x:Name="datas" AlternatingRowBackground="#FFFF7F35" AlternationCount="2" HorizontalAlignment="Left" Height="400" Margin="10,24,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=4}" MinColumnWidth="100" Background="#FFFF7F35" Width="600" BorderBrush="#FFFF7F35"/>
         <Button x:Name="searchbutton" Content="Keresés" HorizontalAlignment="Left" Height="25" Margin="671,126,0,0" VerticalAlignment="Top" Width="150" FontSize="15" Click="searchbutton_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="White" BorderBrush="#FFFFA464"/>
         <TextBox x:Name="searchtext" HorizontalAlignment="Left" Height="25" Margin="671,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" BorderBrush="#FFFF7F35"/>
         <ComboBox x:Name="selectsearch" HorizontalAlignment="Left" Height="25" Margin="671,66,0,0" VerticalAlignment="Top" Width="150" BorderBrush="#FFFF7F35">
@@ -22,6 +32,9 @@
         </ComboBox>
         <Button x:Name="CreateButton" Content="Létrehozás" HorizontalAlignment="Left" Height="35" Margin="688,389,0,0" VerticalAlignment="Top" Width="116" Click="CreateButton_Click" Background="White" BorderBrush="#FFFF7F35"/>
         <Button x:Name="newmark" Content="Jegyek megtekintése" HorizontalAlignment="Left" Height="24" Margin="671,212,0,0" VerticalAlignment="Top" Width="150" Click="newmark_Click" FontSize="15" Background="White" BorderBrush="#FFFF7F35"/>
+        <Button x:Name="kilepesgomb" Content="Kilépés" HorizontalAlignment="Right" Margin="0,0,45,45" VerticalAlignment="Bottom" Click="kilepesgomb_Click" Background="#FFED0F0F"/>
 
     </Grid>
+
+
 </Window>
